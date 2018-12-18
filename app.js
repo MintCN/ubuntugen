@@ -47,9 +47,18 @@
 
 		if(security.checked) {
 			appendSource(['']);
-			appendSource(['deb', arch, 'http://security.debian.org/', rel + '/updates', comps]);
-			if(src.checked) appendSource(['deb-src', arch, 'http://security.debian.org/', rel + '/updates', comps]);
+			if(security_provider.checked) {
+				appendSource(['deb', arch, ftp.replace(/debian\//, "debian-security/"), rel + '/updates', comps]);
+				if(src.checked) 
+					appendSource(['deb-src', arch, ftp.replace(/debian\//, "debian-security/"), rel + '/updates', comps]);
+			} else {
+				appendSource(['deb', arch, 'http://security.debian.org/', rel + '/updates', comps]);
+				if(src.checked) 
+					appendSource(['deb-src', arch, 'http://security.debian.org/', rel + '/updates', comps]);
+			}
 		}
+
+
 
 		list.value = sourceList.join("\n");
 		sourceList = [];

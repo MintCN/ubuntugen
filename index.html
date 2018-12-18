@@ -97,11 +97,11 @@
 					<select name="releases">
 						<option value="stable" data-updates selected>Stable</option>
 						<option value="testing" data-updates>Testing</option>
-						<option value="buster" data-updates>Testing (buster)</option>
-						<option value="stretch" data-updates>Debian 9 (stretch)</option>
-						<option value="jessie" data-updates>Debian 8 (jessie)</option>
-						<option value="wheezy" data-updates>Debian 7 (wheezy) </option>
-						<option value="squeeze-lts">Debian 6.0 (squeeze) </option>
+						<option value="buster" data-updates>Testing (Buster)</option>
+						<option value="stretch" data-updates>Debian 9 (Stretch)</option>
+						<option value="jessie" data-updates>Debian 8 (Jessie)</option>
+						<option value="wheezy" data-updates>Debian 7 (Wheezy) </option>
+						<option value="squeeze-lts">Debian 6.0 (Squeeze) </option>
 					</select></label></p>
 
 					<p><label>Arch<br>
@@ -127,10 +127,11 @@
 					</select></label></p>
 				</div>
 
-				<p><label><input name="src" type="checkbox" checked> Include source</label><br>
-					<label><input name="contrib" type="checkbox" checked> Contrib</label><br>
-					<label><input name="non-free" type="checkbox" checked> Non-Free</label><br>
-					<label><input name="security" type="checkbox" checked> Security</label></p>
+				<p><label title="if enable, include contrib component"><input name="contrib" type="checkbox" checked> Contrib</label><br>
+				   <label title="if enable, include non-free component"><input name="non-free" type="checkbox" checked> Non-free</label><br>
+				   <label title="if enable, add official security updates"><input name="security" type="checkbox" checked> Security</label><br>
+				   <label title="if enable, include source code of packages"><input name="src" type="checkbox" checked> Include Source</label><br>
+				   <label title="if enable, use security updates from selected mirror)"><input name="security_provider" type="checkbox" checked> Security_Provider</label></p>
 
 				<p><label>Source List<br>
 				<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="list" rows="10" cols="100"></textarea></label></p>
