@@ -8,6 +8,7 @@
 		contrib = document.querySelector('input[name=contrib]'),
 		nonfree = document.querySelector('input[name=non-free]'),
 		security = document.querySelector('input[name=security]');
+		security_provider = document.querySelector('input[name=security_provider]');
 
 	var sourceList = [];
 
