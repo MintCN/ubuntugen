@@ -1,1 +1,1 @@
-The source code for <https://mudongliang.github.io/listgenerator/> 
+The source code for <https://mudongliang.github.io/debgen/>
