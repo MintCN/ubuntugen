@@ -1,1 +1,1 @@
-The source code for <https://mudongliang.github.io/debgen/>
+The source code for <https://mudongliang.github.io/ubuntugen/>
