@@ -4,9 +4,9 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Sources List Generator for Debian</title>
-		<meta name="description" content="Sources List Generator for official Debian repositories">
-		<meta name="keywords" content="Debian, Server, Repository, Generator, Sources, Sources List, deb, deb-src, Linux, distro, distribution">
+		<title>Sources List Generator for Ubuntu</title>
+		<meta name="description" content="Sources List Generator for official Ubuntu repositories">
+		<meta name="keywords" content="Ubuntu, Server, Repository, Generator, Sources, Sources List, deb, deb-src, Linux, distro, distribution">
 		<meta name="robots" content="noodp,noydir">
 		<meta name="google-site-verification" content="M1qySTPCp0tj73JiCP1yjJKSwVwGIDoqCd8385lwdl0">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans|Source+Code+Pro">
@@ -16,16 +16,16 @@
 		<main>
 			<div class="wrap--header">
 				<div class="wrap">
-					<h2 class="header">Debian Sources List Generator</h2>
+					<h2 class="header">Ubuntu Sources List Generator</h2>
 
 					<div class="fixed--right">
-						<a class="github-button" href="https://github.com/MintCN/debgen/fork"
+						<a class="github-button" href="https://github.com/mudongliang/ubuntugen/fork"
 							data-icon="octicon-repo-forked"
 							data-style="mega"
-							data-count-href="/MintCN/debgen/network"
-							data-count-api="/repos/MintCN/debgen#forks_count"
+							data-count-href="/mudongliang/ubuntugen/network"
+							data-count-api="/repos/mudongliang/ubuntugen#forks_count"
 							data-count-aria-label="# forks on GitHub"
-							aria-label="Fork MintCN/debgen on GitHub">Fork</a>
+							aria-label="Fork mudongliang/ubuntugen on GitHub">Fork</a>
 					</div>
 				</div>
 			</div>
@@ -33,76 +33,24 @@
 				<div class="elemnts--inline">
 					<p><label>Mirror<br>
 					<select name="mirror">
-						<!--
-						<option value="http://ftp.at.debian.org/debian/">Austria</option>
-						<option value="http://ftp.au.debian.org/debian/">Australia</option>
-						<option value="http://ftp.be.debian.org/debian/">Belgium</option>
-						<option value="http://ftp.bg.debian.org/debian/">Bulgaria</option>
-						<option value="http://ftp.br.debian.org/debian/">Brazil</option>
-						<option value="http://ftp.by.debian.org/debian/">Belarus</option>
-						<option value="http://ftp.ca.debian.org/debian/">Canada</option>
-						<option value="http://ftp.ch.debian.org/debian/">Switzerland</option>
-						-->
-						<option value="http://ftp.cn.debian.org/debian/">中国官方镜像</option>
-						<option value="http://ftp2.cn.debian.org/debian/">中国官方镜像2</option>
-						<option value="http://mirror.lzu.edu.cn/debian/">兰州大学开源社区镜像站</option>
-						<option value="http://mirrors.ustc.edu.cn/debian/">中科大开源软件镜像</option>
-						<option value="http://mirrors.huaweicloud.com/debian/">华为开源镜像站</option>
-						<option value="http://mirrors.shu.edu.cn/debian/">上海大学开源镜像站</option>
-						<option value="http://mirrors.tuna.tsinghua.edu.cn/debian/">清华大学开源软件镜像站</option>
-						<option value="http://mirrors.nju.edu.cn/debian/" selected="selected">南京大学开源镜像站</option>
-						<!--
-						<option value="http://ftp.cz.debian.org/debian/">Czech Republic</option>
-						<option value="http://ftp.de.debian.org/debian/">Germany</option>
-						<option value="http://ftp2.de.debian.org/debian/">Germany</option>
-						<option value="http://ftp.dk.debian.org/debian/">Denmark</option>
-						<option value="http://ftp.ee.debian.org/debian/">Estonia</option>
-						<option value="http://ftp.es.debian.org/debian/">Spain</option>
-						<option value="http://ftp.fi.debian.org/debian/">Finland</option>
-						<option value="http://ftp2.fr.debian.org/debian/">France</option>
-						<option value="http://ftp.fr.debian.org/debian/">France</option>
-						<option value="http://ftp.uk.debian.org/debian/" selected>United Kingdom</option>
-						<option value="http://ftp.gr.debian.org/debian/">Greece</option>
-						<option value="http://ftp.hr.debian.org/debian/">Croatia</option>
-						<option value="http://ftp.hu.debian.org/debian/">Hungary</option>
-						<option value="http://ftp.ie.debian.org/debian/">Ireland</option>
-						<option value="http://ftp.is.debian.org/debian/">Iceland</option>
-						<option value="http://ftp.it.debian.org/debian/">Italy</option>
-						<option value="http://ftp.jp.debian.org/debian/">Japan</option>
-						<option value="http://ftp.kr.debian.org/debian/">Korea, Republic of</option>
-						<option value="http://ftp.lt.debian.org/debian/">Lithuania</option>
-						<option value="http://ftp.md.debian.org/debian/">Moldova</option>
-						<option value="http://ftp.mx.debian.org/debian/">Mexico</option>
-						<option value="http://ftp.nc.debian.org/debian/">New Caledonia</option>
-						<option value="http://ftp.nl.debian.org/debian/">Netherlands</option>
-						<option value="http://ftp.no.debian.org/debian/">Norway</option>
-						<option value="http://ftp.nz.debian.org/debian/">New Zealand</option>
-						<option value="http://ftp.pl.debian.org/debian/">Poland</option>
-						<option value="http://ftp.pt.debian.org/debian/">Portugal</option>
-						<option value="http://ftp.ro.debian.org/debian/">Romania</option>
-						<option value="http://ftp.ru.debian.org/debian/">Russian Federation</option>
-						<option value="http://ftp.se.debian.org/debian/">Sweden</option>
-						<option value="http://ftp.si.debian.org/debian/">Slovenia</option>
-						<option value="http://ftp.sk.debian.org/debian/">Slovakia</option>
-						<option value="http://ftp.sv.debian.org/debian/">El Salvador</option>
-						<option value="http://ftp.th.debian.org/debian/">Thailand</option>
-						<option value="http://ftp.tr.debian.org/debian/">Turkey</option>
-						<option value="http://ftp.tw.debian.org/debian/">Taiwan</option>
-						<option value="http://ftp.ua.debian.org/debian/">Ukraine</option>
-						-->
-						<option value="http://ftp.us.debian.org/debian/">United States</option>
+						<option value="http://mirrors.aliyun.com/ubuntu/">阿里云官方镜像站</option>
+						<option value="http://mirrors.hit.edu.cn/ubuntu/">哈尔滨工业大学开源镜像站</option>
+						<option value="http://mirror.lzu.edu.cn/ubuntu/">兰州大学开源社区镜像站</option>
+						<option value="http://mirrors.ustc.edu.cn/ubuntu/">中科大开源软件镜像</option>
+						<option value="http://mirrors.huaweicloud.com/ubuntu/">华为开源镜像站</option>
+						<option value="http://ftp.sjtu.edu.cn/ubuntu/">上海交通大学开源镜像站</option>
+						<option value="http://mirrors.tuna.tsinghua.edu.cn/ubuntu/">清华大学开源软件镜像站</option>
+						<option value="http://mirrors.nju.edu.cn/ubuntu/" selected="selected">南京大学开源镜像站</option>
 					</select></label></p>
 
 					<p><label>Releases<br>
 					<select name="releases">
-						<option value="stable" data-updates selected>Stable</option>
-						<option value="testing" data-updates>Testing</option>
-						<option value="bullseye" data-updates>Testing (Bullseye)</option>
-						<option value="buster" data-updates>Debian 10 (Buster)</option>
-						<option value="stretch" data-updates>Debian 9 (Stretch)</option>
-						<option value="jessie" data-updates>Debian 8 (Jessie)</option>
-						<option value="wheezy" data-updates>Debian 7 (Wheezy) </option>
-						<option value="squeeze-lts">Debian 6.0 (Squeeze) </option>
+						<option value="focal" data-updates selected>Ubuntu 20.04.1 LTS (Focal)</option>
+						<option value="bionic" data-updates>Ubuntu 18.04.5 LTS (Bionic)</option>
+						<option value="xenial" data-updates>Ubuntu 16.04.7 LTS (Xenial)</option>
+						<option value="trusty" data-updates>Ubuntu 14.04.6 LTS (Trusty)</option>
+						<option value="precise" data-updates>Ubuntu 12.04.5 LTS (Precise)</option>
+						<option value="groovy" data-updates>Ubuntu 20.10(Groovy)</option>
 					</select></label></p>
 
 					<p><label>Arch<br>
@@ -128,11 +76,12 @@
 					</select></label></p>
 				</div>
 
-				<p><label title="if enable, include contrib component"><input name="contrib" type="checkbox" checked> Contrib</label><br>
-				   <label title="if enable, include non-free component"><input name="non-free" type="checkbox" checked> Non-free</label><br>
-				   <label title="if enable, add official security updates"><input name="security" type="checkbox" checked> Security</label><br>
-				   <label title="if enable, include source code of packages"><input name="src" type="checkbox" checked> Include Source</label><br>
-				   <label title="if enable, use security updates from selected mirror)"><input name="security_provider" type="checkbox" > Security_Provider</label></p>
+				<p><label title="if enable, include community-maintained free and open-source software"><input name="universe" type="checkbox"> Universe</label><br>
+				   <label title="if enable, add proprietary drivers for devices"><input name="restricted" type="checkbox" > Restricted</label><br>
+				   <label title="if enable, add software restricted by copyright or legal issues"><input name="multiverse" type="checkbox" > Multiverse</label><br>
+				   <label title="if enable, add official security updates"><input name="security" type="checkbox" checked> Security Upates</label><br>
+				   <label title="if enable, include source code of software"><input name="src" type="checkbox" > Software Sources</label><br>
+
 
 				<p><label>Source List<br>
 				<textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" name="list" rows="10" cols="100"></textarea></label></p>

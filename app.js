@@ -5,18 +5,19 @@
 		releases = document.querySelector('select[name=releases]'),
 		list = document.querySelector('textarea[name=list]'),
 		src = document.querySelector('input[name=src]'),
-		contrib = document.querySelector('input[name=contrib]'),
-		nonfree = document.querySelector('input[name=non-free]'),
+		universe = document.querySelector('input[name=universe]'),
+		restricted= document.querySelector('input[name=restricted]');
+		multiverse= document.querySelector('input[name=multiverse]');
 		security = document.querySelector('input[name=security]');
-		security_provider = document.querySelector('input[name=security_provider]');
 
 	var sourceList = [];
 
 	var getComponents = function() {
 		var components = ['main'];
 
-		if(contrib.checked) components.push('contrib');
-		if(nonfree.checked) components.push('non-free');
+		if(universe.checked) components.push('universe');
+		if(restricted.checked) components.push('restricted');
+		if(multiverse.checked) components.push('multiverse');
 
 		return components.join(' ');
 	};
@@ -38,7 +39,9 @@
 		var arch = getArch();
 
 		appendSource(['deb', arch, ftp, rel, comps]);
-		if(src.checked) appendSource(['deb-src', arch, ftp, rel, comps]);
+		if(src.checked)
+			appendSource(['deb-src', arch, ftp, rel, comps]);
+
 
 		if(releases.options[releases.selectedIndex].hasAttribute('data-updates')) {
 			appendSource(['']);
@@ -46,20 +49,13 @@
 			if(src.checked) appendSource(['deb-src', arch, ftp, rel + '-updates', comps]);
 		}
 
+
 		if(security.checked) {
 			appendSource(['']);
-			if(security_provider.checked) {
-				appendSource(['deb', arch, ftp.replace(/debian\//, "debian-security/"), rel + '/updates', comps]);
-				if(src.checked) 
-					appendSource(['deb-src', arch, ftp.replace(/debian\//, "debian-security/"), rel + '/updates', comps]);
-			} else {
-				appendSource(['deb', arch, 'http://security.debian.org/', rel + '/updates', comps]);
-				if(src.checked) 
-					appendSource(['deb-src', arch, 'http://security.debian.org/', rel + '/updates', comps]);
-			}
+			appendSource(['deb', arch, 'http://security.ubuntu.org/', rel + '-security', comps]);
+			if(src.checked)
+				appendSource(['deb-src', arch, 'http://security.ubuntu.org/', rel + '-security', comps]);
 		}
-
-
 
 		list.value = sourceList.join("\n");
 		sourceList = [];
